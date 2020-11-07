@@ -11,18 +11,19 @@
     <fieldset style="width: 500px">
     <form action="">
 
-        <h3 style="background-color: red">Thông tin của bạn</h3> <br>
+        <h3 style="background-color: red">Sở thích của bạn</h3> <br>
         <span style="color: blue">Họ và tên:
         <input name="yournam" type="text"> <br><br>
         Email:
         <input name="email" type="text" ><br><br>
-        Sở thích:</span>
+            <span style="text-align: left">Sở thích:</span>
+        </span>
         <div style="color: orange">
-            <div><input value="sport" id="1" name="sport" type="checkbox">
+            <div><input value="sport" id="1" name="sport" type="checkbox" style="align-items: flex-start">
                 <label for="1">Thể thao</label>
-                <input value="music" id="2" name="music" type="checkbox">
+                <input value="music" id="2" name="music" type="checkbox" style="align-items: center">
                 <label for="2">Âm nhạc</label>
-                <input value="reading" id="3" name="reading" type="checkbox">
+                <input value="reading" id="3" name="reading" type="checkbox" style="align-items: flex-end">
                 <label for="3">Đọc sách </label></div><br>
             <div> <input value="d" id="4" name="hobby" type="checkbox">
                 <labekl for="4">Lướt Web</labekl>
@@ -44,6 +45,38 @@
         <input type="reset" value="Nhập lại">
     </form>
         </fieldset>
+</div>
+<br><br><br>
+<div style="size: 500px" >
+    <div style="background-color: yellow" >
+        <fieldset style="width: 500px">
+            <form action="abc.com" method="get">
+                <h3  style="background-color: lightskyblue">ĐĂNG KÝ HỌC VIÊN</h3>
+                Họ và tên:
+                <input type="text" name="name" style="width: 200px"><br><br>
+                Ngày Sinh:
+                <input type="text" name="dateofbirth" style="width: 150px"><br><br>
+                Giới tính:
+                <input type="radio" name="gender">Nam
+                <input type="radio" name="gender">Nữ <br><br>
+                Địa chỉ:
+                <input type="text" name="address" style="width: 200px"><br><br>
+                Lớp :
+                <select>
+                    <option value="Chọn lớp">-Chọn Lớp-</option>
+                    <option value="A"> LA</option>
+                    <option value="B">LB</option>
+                    <option value="C">LC</option>
+                </select> <br><br>
+                Email:
+                <input type="text" name="email" style="width: 100px"> <br><br>
+                Điện thoại:
+                <input type="text" name="phone" style="width: 100px"><br><br>
+                <input type="submit" value="Đăng ký" name="send">
+                <input type="reset" value="Nhập lại" name="rester">
+            </form>
+        </fieldset>
+    </div>
 </div>
 </body>
 </html>
