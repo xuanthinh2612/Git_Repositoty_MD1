@@ -3,25 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Form co ban</title>
+    <style>
+    </style>
 </head>
 <body>
-<form action="">
-    Thông tin của bạn <br>
-    Họ và tên:
-    <input name="yournam" type="text"> <br><br>
-    Email:
-    <input name="email" type="text" ><br><br>
-    Sở thích:
-    <div><input value="a" id="1" name="hobby" type="checkbox">Thể thao
-    <input value="b" id="2" name="hobby" type="checkbox">Âm nhạc
-    <input value="c" id="3" name="hobby" type="checkbox">Đọc sách </div><br>
-   <div> <input value="d" id="4" name="hobby" type="checkbox">Lướt Web
-    <input value="e" id="5" name="hobby" type="checkbox">Chơi Game
-    <input value="f" id="6" name="hobby" type="checkbox">Chụp ảnh </div><br>
-    <div><input value="g" id="7" name="hobby" type="checkbox">Du Lịch
-    <input value="h" id="8" name="hobby" type="checkbox">Nấu ăn
-    <input value="1" id="9" name="hobby" type="checkbox"> xem phim</div>
+<div align="center">
+    <fieldset style="width: 500px">
+    <form action="">
 
-</form>
+        <h3 style="background-color: red">Thông tin của bạn</h3> <br>
+        <span style="color: blue">Họ và tên:
+        <input name="yournam" type="text"> <br><br>
+        Email:
+        <input name="email" type="text" ><br><br>
+        Sở thích:</span>
+        <div style="color: orange">
+            <div><input value="sport" id="1" name="sport" type="checkbox">
+                <label for="1">Thể thao</label>
+                <input value="music" id="2" name="music" type="checkbox">
+                <label for="2">Âm nhạc</label>
+                <input value="reading" id="3" name="reading" type="checkbox">
+                <label for="3">Đọc sách </label></div><br>
+            <div> <input value="d" id="4" name="hobby" type="checkbox">
+                <labekl for="4">Lướt Web</labekl>
+                <input value="e" id="5" name="hobby" type="checkbox">
+                <label for="5">Chơi Game</label>
+                <input value="f" id="6" name="hobby" type="checkbox">
+                <label for="6">Chụp ảnh</label>
+            </div><br>
+            <div><input value="g" id="7" name="hobby" type="checkbox">
+                <label for="7">Du Lịch</label>
+                <input value="h" id="8" name="hobby" type="checkbox">
+                <label for="8">Nấu ăn</label>
+                <input value="i" id="9" name="hobby" type="checkbox">
+                <label for="9">xem phim</label>
+            </div>
+        </div>
+        <br>
+        <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại">
+    </form>
+        </fieldset>
+</div>
 </body>
 </html>
