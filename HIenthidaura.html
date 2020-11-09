@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuc hanh hien thi dau ra</title>
+</head>
+<body>
+<h3>Bai 1</h3>
+<button type="button" onclick="thongbao()">Click vao  BT1</button>
+    <script>
+        function thongbao() {
+            alert('Hello world')
+        }
+    </script>
+<br><br><br>
+<h3 id="a101">Bai tap 2</h3>
+<button type="button" onclick="showmessage()">show hidden message BT2</button>
+<script>
+    function showmessage() {
+        document.getElementById("a101").innerHTML='Xin chao cac ban'
+    }
+</script>
+<br><br><br>
+<h3>Bai 3</h3>
+<button type="button" onclick="showwritefunction()">Bai tap 3 BT3</button>
+    <script>
+        function showwritefunction() {
+            document.write('day la bai tap 3')
+        }
+    </script>
+<br><br><br>
+<h3>Bai 4</h3>
+<button type="button" onclick="showconsole()">Showconsole.log BT4</button>
+<script>
+    function showconsole() {
+        console.log('xin chao');
+    }
+</script>
+</body>
+</html>
