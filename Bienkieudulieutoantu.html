@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập biến kiểu dữ liệu toán tử</title>
+    <style>
+        label{
+            width: 150px;
+            color: black;
+            float: left;
+        }
+        input{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h3 id="bt1">Bài 1: Chương trình tính điểm trung bình</h3>
+    <label>Diem toan</label>
+    <input id="diemtoan" type="number" size="30" value=""><br>
+    <label>Diem ly</label>
+    <input id="diemly" type="number" size="30" value=""><br>
+    <label>Diem hoa</label>
+    <input id="diemhoa" type="number" size="30" value=""><br>
+    <button type="button" onclick="tinhtong(); return false">Diem trung binh</button><br><br>    <p><b>Diem trung binh cua ban la : </b><span id="dtb"></span></p>
+
+</form>
+<script>
+    // let toan = +prompt('nhap vao diem toan');
+    // let ly = +prompt('nhap vao diem ly');
+    // let hoa = +prompt('nhap vao diem hoa');
+    function tinhtong() {
+        let toan = +document.getElementById('diemtoan').value;
+        let ly = +document.getElementById('diemly').value;
+        let hoa = +document.getElementById('diemhoa').value;
+        let tong =(toan+ly+hoa)/3
+        console.log(typeof toan);
+
+        document.getElementById('dtb').innerHTML=tong.toFixed(2);
+    }
+
+</script>
+<form>
+    <h3> Bài 2: Viết chương trình đổi nhiệt độ</h3>
+    <br>
+    <label>Nhập Độ C:</label><br>
+    <input type="number" id="doc" value="">&nbsp;&nbsp;
+    <button type="button" onclick="doinhietdo()" >Chuyển sang độ F</button>&nbsp;&nbsp;
+    <button type="reset">Reset</button>
+    <br>
+    <label>Độ F:</label>
+    <span id="dof"></span>
+</form>
+<script>
+
+
+    function doinhietdo() {
+        let dof = +document.getElementById('doc').value*9/5+32;
+    document.getElementById('dof').innerHTML= dof;
+    }
+</script>
+<br>
+<br>
+
+<form>
+    <h3> Bài 3: Viết chương tính diện tích hình tròn</h3>
+    <label>Nhập bán kính:</label><br>
+    <input type="number" id="bankinh" value="">&nbsp;&nbsp;
+    <button type="button" onclick="tinhdthinhtron()" >Tính</button>&nbsp;&nbsp;
+    <button type="reset">Reset</button>
+    <br>
+    <label>Diện tích hình tròn:</label>
+    <span id="dtht"></span>
+</form>
+<script>
+
+
+    function tinhdthinhtron() {
+        let dtht = (+document.getElementById('bankinh').value)**2*3.14159
+        document.getElementById('dtht').innerHTML= dtht.toFixed(2);
+    }
+</script>
+<br>
+<br>
+
+<form>
+    <h3> Bài 4: Viết chương tính chu vi hình tròn</h3>
+    <label>Nhập bán kính:</label><br>
+    <input type="number" id="bankinh2" value="">&nbsp;&nbsp;
+    <button type="button" onclick="tinhcvhinhtron()" >Tính</button>&nbsp;&nbsp;
+    <button type="reset">Reset</button>
+    <br>
+    <label>Chu vi hình tròn:</label>
+    <span id="cvht"></span>
+</form>
+<script>
+
+
+    function tinhcvhinhtron() {
+        let cvht = (+document.getElementById('bankinh').value)*2*3.14159
+        document.getElementById('cvht').innerHTML= cvht.toFixed(2);
+    }
+</script>
+</body>
+</html>
