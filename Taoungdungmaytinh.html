@@ -1,10 +1,53 @@
-<!DOCTYPE html>
+<<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ung dung may tinh</title>
 </head>
 <body>
-$END$
+<form>
+    <fieldset style="width: 600px">
+<h3>Calculator</h3>
+        <input type="number" id="firstnumber" width="150">&nbsp;&nbsp;
+        <input type="number" id="secondnumber" width="150">
+        <br>
+        <br>
+        <br>
+        <button type="button" id="cong" onclick="phepcong()">Addition(+)</button>
+        <button type="button" id="tru" onclick="pheptru()">Subtraction(-)</button>
+        <button type="button" id="nhan" onclick="phepnhan()">Multiplication(*)</button>
+        <button type="button" id="chia" onclick="phepchia()">Divison(/)</button>
+        <button type="reset">Reset</button>
+        <br>
+        <br>
+        <span>Result: </span><b><span id="result"></span></b>
+    </fieldset>
+</form>
+<script>
+    function phepcong() {
+        let firstnumber=+document.getElementById('firstnumber').value;
+        let secondnumber=+document.getElementById('secondnumber').value;
+        document.getElementById('result').innerText=firstnumber+secondnumber;
+    }
+    function pheptru() {
+        let firstnumber=+document.getElementById('firstnumber').value;
+        let secondnumber=+document.getElementById('secondnumber').value;
+        document.getElementById('result').innerText=firstnumber-secondnumber;
+    }
+    function phepnhan() {
+        let firstnumber=+document.getElementById('firstnumber').value;
+        let secondnumber=+document.getElementById('secondnumber').value;
+        document.getElementById('result').innerText=firstnumber*secondnumber;
+    }
+    function phepchia() {
+        let firstnumber=+document.getElementById('firstnumber').value;
+        let secondnumber=+document.getElementById('secondnumber').value;
+        document.getElementById('result').innerText=firstnumber/secondnumber;
+    }
+
+</script>
 </body>
 </html>
