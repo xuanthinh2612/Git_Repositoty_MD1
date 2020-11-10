@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Bài tập biến kiểu dữ liệu toán tử</title>
     <style>
-        label{
+        label {
             width: 150px;
             color: black;
             float: left;
         }
-        input{
+
+        input {
             margin-bottom: 5px;
         }
     </style>
@@ -23,7 +24,9 @@
     <input id="diemly" type="number" size="30" value=""><br>
     <label>Diem hoa</label>
     <input id="diemhoa" type="number" size="30" value=""><br>
-    <button type="button" onclick="tinhtong(); return false">Diem trung binh</button><br><br>    <p><b>Diem trung binh cua ban la : </b><span id="dtb"></span></p>
+    <button type="button" onclick="tinhtong(); return false">Diem trung binh</button>
+    <br><br>
+    <p><b>Diem trung binh cua ban la : </b><span id="dtb"></span></p>
 
 </form>
 <script>
@@ -34,10 +37,10 @@
         let toan = +document.getElementById('diemtoan').value;
         let ly = +document.getElementById('diemly').value;
         let hoa = +document.getElementById('diemhoa').value;
-        let tong =(toan+ly+hoa)/3
+        let tong = (toan + ly + hoa) / 3
         console.log(typeof toan);
 
-        document.getElementById('dtb').innerHTML=tong.toFixed(2);
+        document.getElementById('dtb').innerHTML = tong.toFixed(2);
     }
 
 </script>
@@ -46,7 +49,7 @@
     <br>
     <label>Nhập Độ C:</label><br>
     <input type="number" id="doc" value="">&nbsp;&nbsp;
-    <button type="button" onclick="doinhietdo()" >Chuyển sang độ F</button>&nbsp;&nbsp;
+    <button type="button" onclick="doinhietdo()">Chuyển sang độ F</button>&nbsp;&nbsp;
     <button type="reset">Reset</button>
     <br>
     <label>Độ F:</label>
@@ -56,8 +59,8 @@
 
 
     function doinhietdo() {
-        let dof = +document.getElementById('doc').value*9/5+32;
-    document.getElementById('dof').innerHTML= dof;
+        let dof = +document.getElementById('doc').value * 9 / 5 + 32;
+        document.getElementById('dof').innerHTML = dof;
     }
 </script>
 <br>
@@ -67,7 +70,7 @@
     <h3> Bài 3: Viết chương tính diện tích hình tròn</h3>
     <label>Nhập bán kính:</label><br>
     <input type="number" id="bankinh" value="">&nbsp;&nbsp;
-    <button type="button" onclick="tinhdthinhtron()" >Tính</button>&nbsp;&nbsp;
+    <button type="button" onclick="tinhdthinhtron()">Tính</button>&nbsp;&nbsp;
     <button type="reset">Reset</button>
     <br>
     <label>Diện tích hình tròn:</label>
@@ -77,8 +80,8 @@
 
 
     function tinhdthinhtron() {
-        let dtht = (+document.getElementById('bankinh').value)**2*3.14159
-        document.getElementById('dtht').innerHTML= dtht.toFixed(2);
+        let dtht = (+document.getElementById('bankinh').value) ** 2 * 3.14159
+        document.getElementById('dtht').innerHTML = dtht.toFixed(2);
     }
 </script>
 <br>
@@ -88,7 +91,7 @@
     <h3> Bài 4: Viết chương tính chu vi hình tròn</h3>
     <label>Nhập bán kính:</label><br>
     <input type="number" id="bankinh2" value="">&nbsp;&nbsp;
-    <button type="button" onclick="tinhcvhinhtron()" >Tính</button>&nbsp;&nbsp;
+    <button type="button" onclick="tinhcvhinhtron()">Tính</button>&nbsp;&nbsp;
     <button type="reset">Reset</button>
     <br>
     <label>Chu vi hình tròn:</label>
@@ -98,9 +101,126 @@
 
 
     function tinhcvhinhtron() {
-        let cvht = (+document.getElementById('bankinh').value)*2*3.14159
-        document.getElementById('cvht').innerHTML= cvht.toFixed(2);
+        let cvht = (+document.getElementById('bankinh').value) * 2 * 3.14159
+        document.getElementById('cvht').innerHTML = cvht.toFixed(2);
     }
+</script>
+<br>
+<br>
+<form>
+    <h3> Bài 5: Chuyển đổi tiền tệ</h3>
+    <table border="0" cellspacing="5">
+        <tr>
+            <td><label><b>Nhập vào số tiền</b></label></td>
+            <td><input type="number" value="" id="inputmoney"></td>
+            <td>
+                <select name="from" id="from" style="width: 100px">
+                    <option name="from" value="VND">VND</option>
+                    <option name="from" value="USD">USD</option>
+                    <option name="from" value="YEN">YEN</option>
+                    <option name="from" value="WON">WON</option>
+                </select>
+            </td>
+            <td>
+                <button style="width: 100px" type="button" onclick="doitien()">Đổi</button>
+            </td>
+        </tr>
+        <tr>
+            <td><label><b>Thành tiền</b></label></td>
+            <td id="output"></td>
+            <td>
+                <select id="to" style="width: 100px">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="YEN">YEN</option>
+                    <option value="WON">WON</option>
+                </select>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function doitien() {
+        let inputmoney = document.getElementById('inputmoney').value;
+        let frommoney = document.getElementById('from').value;
+        let tomoney = document.getElementById('to').value;
+        let outputmoney = document.getElementById('output');
+        if (frommoney == "VND") {
+            if (tomoney == 'VND') {
+                outputmoney.innerHTML = inputmoney / 1
+            }
+            ;
+            if (tomoney == 'USD') {
+                outputmoney.innerHTML = inputmoney / 23500
+            }
+            ;
+            if (tomoney == 'YEN') {
+                outputmoney.innerHTML = inputmoney / 200
+            }
+            ;
+            if (tomoney == 'WON') {
+                outputmoney.innerHTML = inputmoney / 20.5
+            }
+            ;
+        }
+        if (frommoney == "USD") {
+            if (tomoney == 'VND') {
+                outputmoney.innerHTML = inputmoney *23500
+            }
+            ;
+            if (tomoney == 'USD') {
+                outputmoney.innerHTML = inputmoney * 1
+            }
+            ;
+            if (tomoney == 'YEN') {
+                outputmoney.innerHTML = inputmoney *105
+            }
+            ;
+            if (tomoney == 'WON') {
+                outputmoney.innerHTML = inputmoney *1115
+            }
+            ;
+        }
+        if (frommoney == "WON") {
+            if (tomoney == 'VND') {
+                outputmoney.innerHTML = inputmoney *20.5
+            }
+            ;
+            if (tomoney == 'USD') {
+                outputmoney.innerHTML = inputmoney * 0.00090
+            }
+            ;
+            if (tomoney == 'YEN') {
+                outputmoney.innerHTML = inputmoney *0.094
+            }
+            ;
+            if (tomoney == 'WON') {
+                outputmoney.innerHTML = inputmoney *1
+            }
+            ;
+        }
+        if (frommoney == "YEN") {
+            if (tomoney == 'VND') {
+                outputmoney.innerHTML = inputmoney *200
+            }
+            ;
+            if (tomoney == 'USD') {
+                outputmoney.innerHTML = inputmoney * 0.095
+            }
+            ;
+            if (tomoney == 'YEN') {
+                outputmoney.innerHTML = inputmoney*1
+            }
+            ;
+            if (tomoney == 'WON') {
+                outputmoney.innerHTML = inputmoney *10.6
+            }
+            ;
+        }
+
+    }
+    ;
 </script>
 </body>
 </html>
