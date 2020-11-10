@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is leaf year</title>
+</head>
+<body>
+<h3>Nhập vào năm cần kiểm tra</h3>
+<input type="number" style="width: 150px" id="inputyear">
+<br>
+<br>
+<button type="button" onclick="hamkiemtra()">Kiểm tra</button>
+<script>
+    function hamkiemtra() {
+        let a = document.getElementById('inputyear').value;
+        if (a % 100 == 0) {
+            if (a % 400 == 0) {
+                alert(a + " Là năm nhuận")
+            } else {
+                alert(a + ' Không là năm nhuận')
+            }
+
+        } else {
+            if (a % 4 == 0) {
+                alert(a + ' Là năm nhuận')
+            } else {
+                alert(a + ' Không là năm nhuận')
+            }
+        }
+    }
+</script>
+</body>
+</html>
