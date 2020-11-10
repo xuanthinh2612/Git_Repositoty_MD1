@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành hàm if else</title>
+    <style>
+        label {
+            width: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <fieldset style="width: 500px">
+        <legend>JAVASCRIPT QUESTION</legend>
+        <h3>What is the “official” name of JavaScript?</h3>
+        <input type="text" id="answer" style="width: 100px">
+        <br>
+        <br>
+        <button type="button" onclick="checkanswer()">Check Answer</button>
+    </fieldset>
+</form>
+<script>
+    function checkanswer() {
+        let answer = document.getElementById('answer').value;
+        if (answer == 'ECMAScript') {
+            alert('You are right')
+        } else {
+            alert('Didn’t know? ECMAScript!')
+        }
+    }
+</script>
+<br>
+<br>
+<br>
+<form>
+    <fieldset style="width: 500px">
+        <legend>LOGIN</legend>
+        <label for="username">User Name</label>
+        <input type="text" id="username" style="width: 150px"><span style="color: #d61b06" id="wrongusername"></span>
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input type="text" id="password" style="width: 150px"><span style="color: #d61b06" id="wrongpassword"></span>
+        <br>
+        <br>
+        <button type="button" onclick="login()" style="width: 100px">Login</button>
+        <button type="reset" style="width: 100px">Reset</button>
+
+    </fieldset>
+</form>
+<script>
+    function login() {
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        let wrongusername = document.getElementById('wrongusername')
+        let wrongpassword = document.getElementById('wrongpassword')
+        if (username=='Admin') {
+            if (password=="") {
+                alert("Vui lòng nhập mật khẩu")
+            }
+            else {
+                if (password=='TheMaster') {
+                    alert('WELL COME TO OUR WEBSITE')
+                }
+                else {
+                    wrongpassword.innerText='Wrong Password'
+                }
+            }
+        }
+        else {
+            if (typeof username==null){
+                alert('Cancel')
+            }
+            else {
+                alert('I dont know you')
+                wrongusername.innerText='Wrong Username'
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
