@@ -85,28 +85,16 @@
 
     function bai32() {
         let number2 = +document.getElementById('number2').value;
-        // let a = number2 > 0;
-        // switch (number2) {
-        //     case number2 > 0:
-        //         alert('1')
-        //         break;
-        //     case number2 < 0:
-        //         alert('-1')
-        //         break;
-        //     default:
-        //         alert('0')
-        // }
         switch (number2) {
             case 0:
                 alert('0')
                 break;
-                default:
-                    if (number2>0){
-                        alert('1')
-                    }
-                    else {
-                        alert('-1')
-                    }
+            default:
+                if (number2 > 0) {
+                    alert('1');
+                } else {
+                    alert('-1');
+                }
         }
     }
 </script>
