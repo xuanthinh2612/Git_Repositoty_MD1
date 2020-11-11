@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập toán tử 3 ngôi</title>
+    <style>
+        label {
+            width: 200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<h3>Bài 1: Viết chương trình nhập vào giá trị cho a và b. Tính tổng a và b</h3>
+<label for="number1">Please Input First Number</label>
+<input type="number" id="number1" style="width: 150px"><br><br>
+<label for="number2">Please Input Second Number</label>
+<input type="number" id="number2" style="width: 150px"><br><br>
+<input type="button" style="width: 100px" value="Check Number" onclick="checknumber()">
+</body>
+<script>
+    function checknumber() {
+        firstnumber = parseInt(document.getElementById('number1').value);
+        secondnumber = parseInt(document.getElementById('number2').value);
+        sum = firstnumber + secondnumber;
+        alert(typeof firstnumber)
+        sum < 4 ? alert('Below') : alert('Over');
+    }
+</script>
+<body>
+<h3>Bài 2: Viết chương trình nhập vào giá trị cho chuỗi message. </h3>
+<label for="messeage">Username</label>
+<input type="text" id="messeage" style="width: 150px"><br><br>
+<input type="button" style="width: 100px" value="Login" onclick="checkmesseage()">
+<script>
+    function checkmesseage() {
+        let messeage = document.getElementById('messeage').value;
+        messeage == 'Employee' ?alert('Hello'):messeage=='Director'?alert('Greetings'):messeage==''?alert('No login'):alert('');
+    }
+</script>
+</body>
+
+</html>
