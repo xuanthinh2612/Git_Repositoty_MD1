@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập với cấu trúc switch case</title>
+</head>
+<body>
+<h3>Bài 1</h3>
+<label for="bai1">Nhập vào tên trình duyệt của bạn</label>
+<input type="text" id="bai1" style="width: 150px;">
+<input type="button" onclick="checkbrowser()" value="Check Browser">
+<script>
+    function checkbrowser() {
+        let browser = document.getElementById('bai1').value;
+        switch (browser) {
+            case 'Edge':
+                alert("You've got the Edge!")
+                break;
+            case 'Chrome':
+            case 'Firefox':
+            case 'Safari':
+            case 'Opera':
+                alert('Okay we support these browsers too');
+                break;
+            default:
+                alert('We hope that this page looks ok!');
+        }
+    }
+</script>
+</body>
+<body>
+<h3>Bài 2</h3>
+<input type="button" onclick="bai2()" value="Check" style="width: 100px;">
+<script>
+    function bai2() {
+        let a = +prompt('a?', '');
+        switch (a) {
+            case 0:
+                alert('0')
+                break;
+            case 1:
+                alert('1')
+                break;
+            case 2:
+            case 3:
+                alert('2,3');
+                break;
+            default :
+                alert('hay nhap du lieu vao')
+
+        }
+    }
+
+</script>
+</body>
+<body>
+<h3>Bài 3: Sử dụng cấu trúc if…else, nhập vào một số,
+    kiểm tra giá trị của số nhập vào
+</h3>
+<label for="number">Nhập vào số: </label>
+&nbsp;
+&nbsp;
+<input type="number" id="number" style="width: 150px;">&nbsp;
+<input type="button" onclick="bai3()" style="width: 100px" value="Check">
+<h4> Thay thế bằng lệnh Switch - case</h4>
+<label for="number2">Nhập vào số: </label>
+&nbsp;
+&nbsp;
+<input type="number" id="number2" style="width: 150px;">&nbsp;
+<input type="button" onclick="bai32()" value="Check Switch case">
+<script>
+    function bai3() {
+        let number = +document.getElementById('number').value;
+        if (number > 0) {
+            alert('1')
+        } else {
+            if (number < 0) {
+                alert('-1')
+            } else {
+                alert('0')
+            }
+        }
+
+    }
+
+    function bai32() {
+        let number2 = +document.getElementById('number2').value;
+        // let a = number2 > 0;
+        // switch (number2) {
+        //     case number2 > 0:
+        //         alert('1')
+        //         break;
+        //     case number2 < 0:
+        //         alert('-1')
+        //         break;
+        //     default:
+        //         alert('0')
+        // }
+        switch (number2) {
+            case 0:
+                alert('0')
+                break;
+                default:
+                    if (number2>0){
+                        alert('1')
+                    }
+                    else {
+                        alert('-1')
+                    }
+        }
+    }
+</script>
+</body>
+</html>
